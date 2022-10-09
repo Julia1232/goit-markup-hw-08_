@@ -1,0 +1,125 @@
+
+.mobile-menu{
+position: fixed;
+top: 0;
+left: 0;
+z-index: 100;
+width: 480px;
+height: 100%;
+max-height: 796px;
+background-color: #fff;
+box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+opacity: 0;
+visibility: hidden;
+pointer-events: none;
+transition: opacity var(--transition-dur-and-func), visibility var(--transition-dur-and-func);
+   
+   &__conteiner {
+        position: relative;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 48px;
+        padding-bottom: 48px;
+        height: 796px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__btn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        line-height: 0;
+    }
+}
+
+.mobile-menu.is-open{
+    opacity: 1;
+    visibility:visible;
+    pointer-events: auto;
+    width: 480px;
+}
+
+.mobile-menu-list{
+display:flex;
+flex-direction: column;
+row-gap: 35px;
+margin-bottom: 302px;
+
+    &__item {
+            font-weight: 500;
+            font-size: 40px;
+            line-height: 1.2;
+            text-align: center;
+            letter-spacing: 0.02em;
+            color: #212121;
+            text-decoration: none;
+        }
+    
+    &__item_current {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 1.2;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: #2196F3;
+        text-decoration: none;
+    }
+}
+
+
+
+.mobile-menu-contact{
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    margin-bottom: 64px;
+
+    &__phone {
+            font-weight: 500;
+            font-size: 34px;
+            line-height: 1.2;
+            letter-spacing: 0.02em;
+            color: #2196F3;
+            text-decoration: none;
+        }
+    &__mail {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.1;
+        letter-spacing: 0.02em;
+        color: #757575;
+        text-decoration: none;
+    }
+}
+
+
+.mobile-menu-social{
+display: flex;
+
+    &__link {
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.1px;
+        letter-spacing: 0.02em;
+        color: #2196F3;
+    }
+    &__title {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+
+.mobile-menu-social__title:nth-child(-n + 3){
+border-right: 1px solid rgba(33, 33, 33, 0.2);}
+
+
+.mobile-menu-social__title:first-child{
+    padding-left: 0px;
+}

@@ -1,0 +1,216 @@
+.logo {
+    color: var(--section-color-1);
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+
+    &__logo-header {
+        color: var(--accent-color);
+    }
+}
+
+
+@media screen and (max-width: 767px){
+
+.header{
+      padding-top: 16px;
+      padding-bottom: 15px;}
+
+.menu{
+     display: none;}
+
+.mail-header{
+        display: none;
+    }
+.phone-header{
+        display: none;
+    }
+
+.mobile-menu-btn {
+    background-color:#FFFFFF;
+    border: none;
+    padding: 0;
+    line-height: 0;
+  }
+  
+.header__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+    .header__container{
+        display: flex;
+        justify-content: space-between;
+    }
+    .header {
+        padding-top: 21px;
+        padding-bottom: 21px;
+        border-bottom: 1px solid #ECECEC;
+    }
+
+    .page-navigation {
+        display: flex;
+        align-items: center;
+        column-gap: 93px;
+    }
+    .menu {
+        display: flex;
+        column-gap: 50px;
+
+        &__link {
+            color: #212121;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1.1;
+            letter-spacing: 0.02em;
+            transition: color var(--transition-dur-and-func);
+
+            &:hover,
+            &:focus {
+                color: var(--accent-color);
+            }
+
+            &_current {
+                color: var(--accent-color);
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 1.9px;
+                letter-spacing: 0.02em;
+            }
+        }
+    }
+
+        .menu__line::after {
+            display: block;
+            content: '';
+            width: 48px;
+            height: 4px;
+            background-color: #2196F3;
+            border-radius: 2px;
+            margin-top: 30px;
+            position: absolute;
+            z-index: 1;
+        }
+    
+    
+    
+        .menu__line.line-portfolio::after {
+            width: 78px;
+        }
+    
+        .menu-contact{
+        display: flex;
+        flex-direction: column;
+    }
+
+        
+        .mail-header,
+        .phone-header {
+            color: var(--second-text-color);
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1.1;
+            letter-spacing: 0.02em;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: color var(--transition-dur-and-func);
+    
+            &:hover,
+            &:focus {
+                color: var(--accent-color);
+            }
+        }
+    
+        .mail-header {
+            margin-left: auto;
+            margin-bottom: 10px;
+        }
+    
+        .mail__icon {
+            margin-right: 8px;
+            fill: #757575;
+            transition: fill var(--transition-dur-and-func);
+        }
+    
+        .phone__icon {
+            margin-right: 8px;
+            fill: #757575;
+            transition: fill var(--transition-dur-and-func);
+        }
+    
+        .mail:focus .mail__icon,
+        .mail:hover .mail__icon {
+            fill: var(--accent-color);
+        }
+    
+        .phone:focus .phone__icon,
+        .phone:hover .phone__icon {
+            fill: var(--accent-color);
+        }
+        .mobile-menu-btn {
+            display: none;
+        }
+       
+
+}
+
+@media screen and (min-width: 1150px){
+
+    .header__container{
+        display: flex;
+        align-items: center;}
+
+    .header {
+            padding-top: 24px;
+            padding-bottom: 25px;  
+            }
+    
+    .menu-contact{
+        display: flex;
+        flex-direction: row-reverse;
+        column-gap: 30px;
+    }
+
+    .menu__line::after {
+        margin-top: 29px;
+
+    }
+    .mail-header {
+        margin-bottom: 0px;
+    }
+    .mail__icon {
+        margin-right: 10px;
+        fill: #757575;
+        transition: fill var(--transition-dur-and-func);
+    }
+
+    .phone__icon {
+        margin-right: 10px;
+        fill: #757575;
+        transition: fill var(--transition-dur-and-func);
+    }
+     
+}
+
+
+
+.footer .mail:hover,
+.footer .mail:focus,
+.footer .phone:hover,
+.footer .phone:focus {
+    color: var(--accent-color);
+}
+
+
+

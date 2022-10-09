@@ -1,0 +1,35 @@
+.modal {
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px 41px;
+
+    &__close-btn {
+            position: absolute;
+            padding: 6px;
+            width: 30px;
+            height: 30px;
+            background: #FFFFFF;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            top: 8px;
+            right: 8px;
+            transition: border var(--transition-dur-and-func);
+            transition: fill var(--transition-dur-and-func);
+            cursor: pointer;
+            
+            &:hover,:focus {
+                    border: 1px solid var(--accent-color)
+                }
+        }
+
+ 
+}
+
+
+.modal__close-btn:hover .modal__close-icon,
+.modal__close-btn:focus .modal__close-icon {
+    fill: var(--accent-color)
+}

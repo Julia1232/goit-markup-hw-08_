@@ -1,0 +1,26 @@
+.social {
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+.social__link {
+    display: flex;
+    border-radius: 50%;
+    padding: 12px;
+    transition: background-color var(--transition-dur-and-func);
+
+    &:hover,
+        &:focus{background-color: #2196F3;}
+}
+
+
+.social__link:hover .social__icon,
+.social__link:focus .social__icon {
+    transition: fill var(--transition-dur-and-func);
+    fill: #FFFFFF;
+}
+
+.social__icon {
+    fill: #AFB1B8;
+}
